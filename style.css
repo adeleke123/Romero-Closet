@@ -1,57 +1,229 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f9f9f9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+/* Global Styles */
+* {
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+body {
+    background-color: #f0f2f5; /* Preferred background color */
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #111;
+}
+
+/* Marquee Styles */
+.marquee {
+    background-color: #444;
+    color: white;
+    padding: 10px 0;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Event List Styles */
+.events-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.events-list li {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.events-list li:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.02);
+}
+
+/* Profile Styles */
+.profile {
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    margin: 15px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.profile:hover {
+    transform: scale(1.05);
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.info {
+    padding: 15px;
+    text-align: center;
+}
+
+.info:hover {
+    background-color: #f8f9fa;
+}
+
+.info p {
+    margin: 10px 0;
+    color: #495057;
+}
+
+.info p:first-child {
+    font-weight: 600;
+}
+
+.profile-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.heading {
+    color: white;
+    font-size: 3.2rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .heading {
+        font-size: 2.5rem;
+    }
+    .profile {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .heading {
+        font-size: 2rem;
+    }
+}
+
+/* Contact Form Styles */
 .container {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 form {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 h2 {
-  margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 label {
-  margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 
 input, select, textarea, button {
-  margin-bottom: 15px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 button {
-  background-color: #28a745;
-  color: #fff;
-  border: none;
-  cursor: pointer;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    cursor: pointer;
 }
 
 button:hover {
-  background-color: #218838;
+    background-color: #218838;
 }
 
 .hidden {
-  display: none;
+    display: none;
 }
 
 #confirmation {
-  margin-top: 20px;
-  color: green;
+    margin-top: 20px;
+    color: green;
 }
 
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
